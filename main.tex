@@ -1,0 +1,281 @@
+\documentclass[xcolor=dvipsnames]{beamer} % dvipsnames gives more built-in colors
+
+
+%% Author adirie2
+%% Designed for George Mason University Electrical and Computer Engineering Department
+
+%\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\usepackage{lipsum}
+\usepackage{blindtext}
+\usepackage[utf8]{inputenc}
+\usepackage[style=verbose,backend=biber]{biblatex}
+\addbibresource{citations.bib}
+% Use for Listingx
+% \usepackage{listings}
+\usepackage{xcolor}
+
+\newcommand{\customcite}[1]{%
+
+  \begingroup
+
+  \renewcommand\thefootnote{}%
+
+  \footnote{\cite{#1}} %
+
+  \addtocounter{footnote}{-1}%
+
+  \endgroup
+
+}
+
+ % Example List Input Listing for Code
+% \definecolor{codegreen}{rgb}{0,0.6,0}
+% \definecolor{codegray}{rgb}{0.5,0.5,0.5}
+% \definecolor{codepurple}{rgb}{0.58,0,0.82}
+% \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+ 
+% \lstdefinestyle{mystyle}{
+%     language=Python,
+%     backgroundcolor=\color{backcolour},   
+%     commentstyle=\color{codegreen},
+%     keywordstyle=\color{magenta},
+%     numberstyle=\tiny\color{codegray},
+%     stringstyle=\color{codepurple},
+%     basicstyle=\ttfamily\footnotesize,
+%     breakatwhitespace=false,         
+%     breaklines=true,                 
+%     captionpos=b,                    
+%     keepspaces=true,                 
+%     numbers=left,                    
+%     numbersep=5pt,                  
+%     showspaces=false,                
+%     showstringspaces=false,
+%     showtabs=false,                  
+%     tabsize=2
+% }
+
+\usetheme{Madrid}
+\useoutertheme{miniframes} % Alternatively: miniframes, infolines, split
+\useinnertheme{circles}
+\definecolor{GMUGreen}{RGB}{30, 98, 56} % GMU Green Color
+
+\usecolortheme[named=GMUGreen]{structure}
+%Information to be included in the title page:
+\title[Footer Title] %optional
+{Main Title}
+
+\subtitle{SubTitle}
+
+% \author[Arthur, Doe] % (optional, for multiple authors)
+% {A.~B.~Arthur\inst{1} \and J.~Doe\inst{2}}
+\author[Name] % (optional, for multiple authors)
+{First~Name}
+
+% \institute[GMU] % (optional)
+\institute[George Mason University]{
+  % \inst{1}%
+  Capacity\\
+  Department of XXXX\\
+  George Mason University
+}
+
+\date[XXXXX XXXst 20XX] % (optional)
+{ECE XXX, XXXXXX 20XX}
+
+% All Green George Mason Logo
+\logo{\includegraphics[height=0.35cm]{GMU_PLogo_Green.png}}
+% Green & Yellow Image George Mason Logo
+\logo{\includegraphics[height=0.35cm]{GMU_PLogo_Green.png}}
+
+\begin{document}
+% Use for List Input Style
+% \lstset{style=mystyle}
+
+
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Slide Title - Blank Slide}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Example Citation - Paren Cite}
+Paren Citation \parencite{8354596}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Example Citation - Text Cite}
+Inline Citation \textcite{10.1145/3240765.3240842}
+\end{frame}
+
+\begin{frame}
+\frametitle{Example Citation - FootNote Cite}
+Footnote Citation \footcite{10.1007/s10710-005-2985-x}
+\end{frame}
+
+\begin{frame}
+\frametitle{Example Citation - Custom Cite}
+Custom Citation just on on the bottom \customcite{8354596}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Bullet Example}
+\begin{itemize}
+    \item Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus
+elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur
+dictum gravida mauris. 
+    \item Nam arcu libero, nonummy eget, consectetuer
+id, vulputate a, magna. Donec vehicula augue eu neque. Pellentesque
+habitant morbi tristique senectus et netus et malesuada fames ac
+turpis egestas
+    \item Mauris ut leo. Cras viverra metus rhoncus sem. Nulla
+et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus sit amet
+tortor gravida placerat.
+    \item Integer sapien est, iaculis in, pretium quis,
+viverra ac, nunc. Praesent eget sem vel leo ultrices bibendum.
+Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar at, mollis
+ac, nulla.
+\end{itemize}
+    \begin{center}
+            % \includegraphics[scale=0.1]{testbench.png}
+    \end{center}
+
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Small Bullet Example}
+Quisque ullamcorper placerat ipsum. Cras nibh. Morbi vel justo vitae lacus
+tincidunt ultrices. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+In hac habitasse platea dictumst.
+    % \footcite{1219010}.
+    
+\begin{minipage}{.5\textwidth}
+\small
+\begin{itemize}
+    \item  Integer tempus convallis augue. Etiam
+facilisis. Nunc elementum fermentum wisi. Aenean placerat. Ut imperdiet,
+enim sed gravida sollicitudin, felis odio placerat quam, ac pulvinar elit
+purus eget enim. Nunc vitae tortor
+    \item felis odio placerat quam, ac pulvinar elit
+purus eget enim. Nunc vitae tortor. Proin tempus nibh sit amet nisl.
+Vivamus quis tortor vitae risus porta vehicula.
+\end{itemize}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+    \begin{center}
+            % \includegraphics[scale=0.2]{Coverage-directed-test-generation.png}
+    \end{center}
+\end{minipage}
+
+\end{frame}
+
+\begin{frame}{Small Bullet MiniPage}
+
+\begin{minipage}[t]{.5\textwidth}
+    \small
+    \begin{itemize}
+        \item Fusce mauris. Vestibulum luctus
+                nibh at lectus. Sed bibendum, nulla
+                a faucibus semper, leo velit ultricies
+                tellus, ac venenatis arcu wisi vel
+                nisl. Vestibulum diam
+       \item Aliquam
+            pellentesque, augue quis sagittis
+            posuere, turpis lacus congue quam,
+            in hendrerit risus eros eget felis.
+            Maecenas eget erat in sapien
+            mattis porttitor. 
+    \end{itemize}  
+\end{minipage}%
+\begin{minipage}[t]{.5\textwidth}
+    \begin{center}
+        % \includegraphics[scale=0.175]{fuzzalgo.png}
+    \end{center}
+\end{minipage}
+  
+\end{frame}
+
+\begin{frame}
+\frametitle{Split MiniPage Bullet Comparison}
+\small
+\begin{minipage}[t]{.5\textwidth}
+Lorem
+\begin{itemize}
+    \item Suspendisse vel felis. Ut lorem lorem, interdum eu, tincidunt sit     amet,laoreet vitae, arcu. Aenean faucibus pede eu ante.
+    \item Praesent enim elit, rutrum at, molestie non, nonummy vel, nisl. Ut    lectus eros, malesuada sit amet, fermentum eu, sodales cursus, magna
+\end{itemize}
+\end{minipage}%
+\begin{minipage}[t]{.5\textwidth}
+Ipsum
+\begin{itemize}
+    \item Onec eu purus. Quisque
+        vehicula, urna sed ultricies auctor, pede lorem egestas dui, et convallis elit erat sed nulla.
+    \item Donec luctus. Curabitur et nunc. Aliquam dolor odio,
+        commodo pretium, ultricies non, pharetra in, velit. Integer arcu est,
+        nonummy in, fermentum faucibus, egestas vel, odio.
+\end{itemize}
+\end{minipage}%
+\end{frame}
+
+\begin{frame}{Split MiniPage Bullet Comparison w/ Small Bullets}
+\begin{itemize}
+    \tiny
+    \item Sed commodo posuere pede. Mauris ut est. Ut quis purus. Sed ac odio.
+as input and modifies it in order to generate several new child tests.
+    \item Sed vehicula hendrerit sem. Duis non odio. Morbi ut dui. Sed accumsan risus eget odio.
+    \item  In hac habitasse platea dictumst. Pellentesque non elit.
+Fusce sed justo eu urna porta tincidunt.
+    \item Mauris felis odio, sollicitudin sed,
+volutpat a, ornare ac, erat. Morbi quis dolor. 
+\end{itemize} 
+\begin{minipage}[t]{.5\textwidth}
+Lorem
+\begin{center}
+    % \includegraphics[scale=0.15]{determin.png}
+\end{center}
+\end{minipage}%
+\begin{minipage}[t]{.5\textwidth}
+Ipsem
+\begin{center}
+    % \includegraphics[scale=0.225]{nondetermin.png}
+\end{center}
+\end{minipage}%
+\end{frame}
+
+\begin{frame}
+\frametitle{30\% Split MiniPage Bullet w/ Image}
+\begin{minipage}[]{.3\textwidth}
+    \tiny
+    \begin{itemize}
+    \item Morbi luctus, wisi viverra faucibus pretium, nibh est
+            placerat odio, nec commodo wisi enim eget quam. 
+    \item Quisque libero justo, consectetuer a, feugiat vitae,
+            porttitor eu, libero. 
+    \item Uspendisse sed mauris vitae
+            elit sollicitudin malesuada. Maecenas ultricies eros
+            sit amet ante.
+    \end{itemize}
+\end{minipage}%
+\begin{minipage}[]{.7\textwidth}
+    \begin{center}
+         % \includegraphics[scale=0.25]{metareset.png}
+    \end{center}
+\end{minipage}
+\end{frame}
+
+ %% USE THIS WHEN REFERENCES ARE LARGER THAN ONE SLIDE
+ % \begin{frame}[allowframebreaks]{References}
+ \begin{frame}{References}
+    \frametitle{References}
+     \printbibliography
+ \end{frame} 
+
+\end{document}
